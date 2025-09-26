@@ -61,6 +61,9 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
+    
+    // Forgot to create a new repository
+    // Below is the code for Q24
     public void listWithIndex(){
       int position = 0;
       for(String filename : files){
