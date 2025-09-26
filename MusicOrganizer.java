@@ -72,6 +72,19 @@ public class MusicOrganizer
       }
     }
     
+    public void listMatching(String searchString){
+        int matches = 0;
+        for(String filename : files) {
+            if(filename.toLowerCase().contains(searchString.toLowerCase())){
+                System.out.println(filename);
+                matches ++;
+            }
+        }
+        if (matches == 0){
+            System.out.println("No files matched");
+        }
+    }
+    
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
