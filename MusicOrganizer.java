@@ -85,6 +85,19 @@ public class MusicOrganizer
         }
     }
     
+    public void sampleArtist(String artist){
+        int matches = 0;
+        for (String filename : files) {
+            if (filename.toLowerCase().contains(artist.toLowerCase())){
+                player.playSample(filename);
+                matches++;
+            }
+        }
+        if (matches == 0){
+            System.out.println("No Files Found");
+        }
+    }
+    
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
